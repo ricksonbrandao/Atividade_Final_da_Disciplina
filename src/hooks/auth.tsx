@@ -61,17 +61,7 @@ function AuthProvider({ children }: AuthProviderProps) {
                 ...user,
                 userCreate
             ];
-
-            let verificationEmail = false;
             
-            // for(let index = 0; index <= user.length; index++){
-            //     if(userCreate.email == user[index].email){
-            //         verificationEmail = true;
-            //         setIsVerificationEmail(true);
-            //         Alert.alert('Email ja ultilizado');
-            //         return;
-            //     }
-            // }
             
             await AsyncStorage.setItem(LOGIN_USER, JSON.stringify(dataUser));
             console.log('Usuário criado com sucesso');
